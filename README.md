@@ -5,6 +5,8 @@
 This repository shows an example of integrating ReactDOM and `@ts-graphviz/react`
 to display the image output from Graphviz on the browser.
 
+> Check the result with this [DEMO](https://kamiazya.github.io/react-dom-graphviz-integration/)
+
 ## Related packages
 
 - [React](https://www.npmjs.com/package/react)
