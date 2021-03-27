@@ -1,46 +1,66 @@
-# Getting Started with Create React App
+# ReactDOM and @ts-graphviz/react integration
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**This repository is for PoC. Please copy and use.**
 
-## Available Scripts
+This repository shows an example of integrating ReactDOM and `@ts-graphviz/react`
+to display the image output from Graphviz on the browser.
 
-In the project directory, you can run:
+## Related packages
 
-### `yarn start`
+- [React](https://www.npmjs.com/package/react)
+- [ReactDOM](https://www.npmjs.com/package/react-dom)
+- [ts-graphviz](https://www.npmjs.com/package/ts-graphviz)
+- [@ts-graphviz/react](https://www.npmjs.com/package/@ts-graphviz/react)
+- [@hpcc-js/wasm](https://www.npmjs.com/package/@hpcc-js/wasm)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## What's this?
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+If you use [Graphviz](./src/components/Graphviz.tsx) component, you can display the image output by Graphviz
+without being aware of the boundary between ReactDOM and `@ts-graphviz/react` as shown below.
 
-### `yarn test`
+```tsx
+import { FC } from 'react';
+import { render } from 'react-dom';
+import { Digraph, Edge, Node } from '@ts-graphviz/react';
+import { wasmFolder } from '@hpcc-js/wasm';
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+import { Graphviz } from './components/Graphviz'
 
-### `yarn build`
+export const App: FC = () => {
+  return (
+    <div>
+      <Graphviz>
+        <Digraph>
+          <Node id="a" />
+          <Node id="b" />
+          <Edge targets={['a', 'b']}  />
+        </Digraph>
+      </Graphviz>
+    </div>
+  );
+};
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+wasmFolder('https://cdn.jsdelivr.net/npm/@hpcc-js/wasm/dist');
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+render(<App />, document.getElementById('root'));
+```
 
-### `yarn eject`
+This repository uses [@hpcc-js/wasm](https://www.npmjs.com/package/@hpcc-js/wasm)
+to run Graphviz on the browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Since [@hpcc-js/wasm](https://www.npmjs.com/package/@hpcc-js/wasm) uses WASM internally,
+there are restrictions on the browsers that can be executed.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How it Works?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The following processing is performed inside the [Graphviz](./src/components/Graphviz.tsx) component.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Converts `@ts-graphviz/react`'s components inside a `Graphviz` component to a string in dot language format.
+    - Don't include components for ReactDOM (such as `div`) within `Graphviz` components.
+1. The graphviz module in the `@hpcc-js/wasm` package does the dot to svg conversion.
+1. The output svg is inserted in the DOM.
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This software is released under the MIT License, see [LICENSE](./LICENSE).

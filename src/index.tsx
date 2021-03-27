@@ -1,17 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { FC } from 'react';
+import { render } from 'react-dom';
+import { Digraph, Edge, Node } from '@ts-graphviz/react';
+import { wasmFolder } from '@hpcc-js/wasm';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import { Graphviz } from './components/Graphviz'
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+export const App: FC = () => {
+  return (
+    <div>
+      <Graphviz>
+        <Digraph>
+          <Node id="a" />
+          <Node id="b" />
+          <Edge targets={['a', 'b']}  />
+        </Digraph>
+      </Graphviz>
+    </div>
+  );
+};
+
+
+wasmFolder('https://cdn.jsdelivr.net/npm/@hpcc-js/wasm/dist');
+
+render(<App />, document.getElementById('root'));
