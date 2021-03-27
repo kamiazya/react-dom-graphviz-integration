@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/static/js/main.8dc3eca8.chunk.js",
-    "main.js.map": "/static/js/main.8dc3eca8.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.1ae00c00.js",
-    "runtime-main.js.map": "/static/js/runtime-main.1ae00c00.js.map",
-    "static/js/2.19e390a1.chunk.js": "/static/js/2.19e390a1.chunk.js",
-    "static/js/2.19e390a1.chunk.js.map": "/static/js/2.19e390a1.chunk.js.map",
-    "index.html": "/index.html",
-    "static/js/2.19e390a1.chunk.js.LICENSE.txt": "/static/js/2.19e390a1.chunk.js.LICENSE.txt"
+    "main.js": "/react-dom-graphviz-integration/static/js/main.8dc3eca8.chunk.js",
+    "main.js.map": "/react-dom-graphviz-integration/static/js/main.8dc3eca8.chunk.js.map",
+    "runtime-main.js": "/react-dom-graphviz-integration/static/js/runtime-main.db07600f.js",
+    "runtime-main.js.map": "/react-dom-graphviz-integration/static/js/runtime-main.db07600f.js.map",
+    "static/js/2.19e390a1.chunk.js": "/react-dom-graphviz-integration/static/js/2.19e390a1.chunk.js",
+    "static/js/2.19e390a1.chunk.js.map": "/react-dom-graphviz-integration/static/js/2.19e390a1.chunk.js.map",
+    "index.html": "/react-dom-graphviz-integration/index.html",
+    "static/js/2.19e390a1.chunk.js.LICENSE.txt": "/react-dom-graphviz-integration/static/js/2.19e390a1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1ae00c00.js",
+    "static/js/runtime-main.db07600f.js",
     "static/js/2.19e390a1.chunk.js",
     "static/js/main.8dc3eca8.chunk.js"
   ]
