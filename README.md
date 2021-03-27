@@ -52,6 +52,8 @@ to run Graphviz on the browser.
 Since [@hpcc-js/wasm](https://www.npmjs.com/package/@hpcc-js/wasm) uses WASM internally,
 there are restrictions on the browsers that can be executed.
 
+**Check the result with this [DEMO](https://kamiazya.github.io/react-dom-graphviz-integration/).**
+
 ## How it Works?
 
 The following processing is performed inside the [Graphviz](./src/components/Graphviz.tsx) component.
