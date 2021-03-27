@@ -1,6 +1,7 @@
 {
   "name": "react-dom-graphviz-integration",
   "version": "0.1.0",
+  "homepage": "https://kamiazya.github.io/react-dom-graphviz-integration/",
   "private": true,
   "dependencies": {
     "@hpcc-js/wasm": "^1.4.1",
