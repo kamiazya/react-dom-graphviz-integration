@@ -1230,10 +1230,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@hpcc-js/wasm@^1.4.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@hpcc-js/wasm/-/wasm-1.4.1.tgz#fc691c928555507b7e15f69f14a24a4a782d2241"
-  integrity sha512-WYeIuG/B1B1cTcM9D9bC6qDFSZnEcJ9R3SpTW5jh10sTh0hD1h1t/dZudfLwarJD+ce8q4/BP43BplbP3CeNkQ==
+"@hpcc-js/wasm@^1.7.1":
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/@hpcc-js/wasm/-/wasm-1.7.1.tgz#c798f00a1d0bed9ce2681c1165625588f960c4f2"
+  integrity sha512-2EbMjpjPLymWHpqC9+iQs53Yt9bikSjZIZOQAGVEXhTZ4DVSVfqVkPI0kMNi4Ml6Xor1bBQMrWku9gxqkBxjYQ==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
@@ -1616,13 +1616,15 @@
     "@svgr/plugin-svgo" "^5.5.0"
     loader-utils "^2.0.0"
 
-"@ts-graphviz/react@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@ts-graphviz/react/-/react-0.7.0.tgz#0064750078dc0f4c1cf2531525a74a588d01f9ac"
-  integrity sha512-qcsTulwhUob8V8pvTp2SIEWyWiAYddvIfr3eyohDqZFzg2C1Jz9LCmkoeI1k4DftWsedrf+aWVGiUphyqiz3SQ==
+"@ts-graphviz/react@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@ts-graphviz/react/-/react-0.8.0.tgz#b4d6eaead1f969a5d75e9085cb9f79c844ab8da2"
+  integrity sha512-8dX0alvtkD2hmQzRj9xIYK4tCGZT/rETyFeh6wBBnN63VoOOXouXFaKrwAf5Q2FbW+5ggOhyaAgHVKJoy6+/uA==
   dependencies:
     prop-types "^15.7.2"
-    react-reconciler "^0.25.1"
+    react-dom "^17.0.1"
+    react-reconciler "^0.26.1"
+    ts-graphviz "^0.14.0"
 
 "@types/anymatch@*":
   version "1.3.1"
@@ -8740,7 +8742,7 @@ prompts@2.4.0, prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -8953,7 +8955,7 @@ react-dev-utils@^11.0.3:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
-react-dom@^17.0.2:
+react-dom@^17.0.1, react-dom@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
   integrity sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==
@@ -8977,15 +8979,14 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
-react-reconciler@^0.25.1:
-  version "0.25.1"
-  resolved "https://registry.yarnpkg.com/react-reconciler/-/react-reconciler-0.25.1.tgz#f9814d59d115e1210762287ce987801529363aaa"
-  integrity sha512-R5UwsIvRcSs3w8n9k3tBoTtUHdVhu9u84EG7E5M0Jk9F5i6DA1pQzPfUZd6opYWGy56MJOtV3VADzy6DRwYDjw==
+react-reconciler@^0.26.1:
+  version "0.26.2"
+  resolved "https://registry.yarnpkg.com/react-reconciler/-/react-reconciler-0.26.2.tgz#bbad0e2d1309423f76cf3c3309ac6c96e05e9d91"
+  integrity sha512-nK6kgY28HwrMNwDnMui3dvm3rCFjZrcGiuwLc5COUipBK5hWHLOxMJhSnSomirqWwjPBJKV1QcbkI0VJr7Gl1Q==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.19.1"
+    scheduler "^0.20.2"
 
 react-refresh@^0.8.3:
   version "0.8.3"
@@ -9571,14 +9572,6 @@ saxes@^5.0.1:
   integrity sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==
   dependencies:
     xmlchars "^2.2.0"
-
-scheduler@^0.19.1:
-  version "0.19.1"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.19.1.tgz#4f3e2ed2c1a7d65681f4c854fa8c5a1ccb40f196"
-  integrity sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
 
 scheduler@^0.20.2:
   version "0.20.2"
@@ -10531,6 +10524,11 @@ ts-graphviz@^0.14.0:
   integrity sha512-uqGjBf44jZ2YdxGxaSxh1jNK3tASTaiP2XNDJ/FPVdVrntmpYl+ZkZDxyDt1Jt484F7N+hajE8Q4Y2ONnk5SOw==
   dependencies:
     tslib "^2.1.0"
+
+ts-graphviz@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/ts-graphviz/-/ts-graphviz-0.16.0.tgz#7a6e6b5434854bc90ab861e70d5af0d6d20729a7"
+  integrity sha512-3fTPO+G6bSQNvMh/XQQzyiahVLMMj9kqYO99ivUraNJ3Wp05HZOOVtRhi6w9hq7+laP1MKHjLBtGWqTeb1fcpg==
 
 ts-pnp@1.2.0, ts-pnp@^1.1.6:
   version "1.2.0"
